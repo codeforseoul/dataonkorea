@@ -118,6 +118,7 @@ function drawProvinces(err, _, provinces) {
   paths.enter()
     .append('path')
     .attr('d', path)
+    .attr('class', 'province')
     .attr('fill', function (d) { return quantize(d.properties.data); });
     
   paths.exit().remove();

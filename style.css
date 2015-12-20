@@ -33,8 +33,8 @@
 
 #map svg { background-color: #eee; }
 #map svg text { font-size: 10px; }
-#map svg .province { fill: white; }
-#map svg .province:hover { stroke: #333; }
+/*#map svg .province { fill: white; }*/
+#map svg .province:hover { cursor: pointer; stroke: #333; }
 #map svg .province.p0 { fill: rgb(247,251,255); }
 #map svg .province.p1 { fill: rgb(222,235,247); }
 #map svg .province.p2 { fill: rgb(198,219,239); }
