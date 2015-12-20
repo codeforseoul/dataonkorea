@@ -1,0 +1,81 @@
+#main {
+  padding: 60px 60px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#map {
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: center;
+  position: relative;
+}
+
+#control {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.navbar {
+  height: 50px;
+}
+
+/*
+  Map Style
+*/
+
+#map svg { background-color: #eee; }
+#map svg text { font-size: 10px; }
+#map svg .province { fill: white; }
+#map svg .province:hover { stroke: #333; }
+#map svg .province.p0 { fill: rgb(247,251,255); }
+#map svg .province.p1 { fill: rgb(222,235,247); }
+#map svg .province.p2 { fill: rgb(198,219,239); }
+#map svg .province.p3 { fill: rgb(158,202,225); }
+#map svg .province.p4 { fill: rgb(107,174,214); }
+#map svg .province.p5 { fill: rgb(66,146,198); }
+#map svg .province.p6 { fill: rgb(33,113,181); }
+#map svg .province.p7 { fill: rgb(8,81,156); }
+#map svg .province.p8 { fill: rgb(8,48,107); }
+
+/*
+  Legend Style
+*/
+
+#map .legend {
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+}
+
+#map .legend > svg {
+  height: 180px;
+  margin-top: 18px;
+  width: 150px;
+}
+
+#map .legend h4 {
+  color: #111;
+  margin: 24px 0 -12px 20px;
+}
+
+.space {
+  position: absolute;
+}
+
+.space canvas {
+  float: left;
+}
+
+.space div {
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
