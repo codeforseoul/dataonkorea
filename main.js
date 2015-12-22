@@ -228,23 +228,6 @@ function drawTable(target, dataset) {
   grid.render();
 }
 
-function readFiles(parser, file, options) {
-  queue()
-    // get svg data from map file
-    .defer(d3.json, 'map/provinces-topo-simple.json')
-    // set rows from csv
-    .defer(parser, file, options)
-    .await(drawMap)
-}
-
-function drawMap(err, mapData, rows) {
-  queue()
-    // set quantize based on the the range of csv data
-    .defer(setQuantize, rows)
-    .defer(setProvinces, mapData)
-    .await(drawProvinces)
-}
-
 function drawTestMap() {
   Promise.all([readMap('/map/provinces-topo-simple.json'), readCsv('data.csv', {type: 'xhr'})])
     .done(function (results) {
